@@ -200,12 +200,24 @@ footer li+li{
   margin-top: 56px;
 }
 .news-list h1{
-  background: linear-gradient(transparent 64%, #fff);
-  width: 5em;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 16px;
+    position: relative;
+    padding: .5rem 1rem;
+    text-align: center;
+    margin-bottom: 16px;
 } 
+.news-list h1:after {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 2.5em);
+  width: 5em;
+  height: 16px;
+  content: '';
+  background-image: -webkit-repeating-linear-gradient(135deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 .news-list ul{
   list-style: none outside;
   margin: 0 auto;
